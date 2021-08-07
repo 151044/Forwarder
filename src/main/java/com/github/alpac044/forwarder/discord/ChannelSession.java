@@ -1,13 +1,15 @@
 package com.github.alpac044.forwarder.discord;
 
 import com.github.alpac044.forwarder.AbstractSession;
+import net.dv8tion.jda.api.entities.TextChannel;
 
 import java.util.List;
 
 public class ChannelSession extends AbstractSession {
-
-    public ChannelSession(long id) {
+    private TextChannel channel;
+    public ChannelSession(long id, DiscordBot bot, long channelId) {
         super(id);
+        channel = bot.getChannelById(channelId);
     }
 
     @Override
