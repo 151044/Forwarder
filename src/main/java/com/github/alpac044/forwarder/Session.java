@@ -9,5 +9,5 @@ public interface Session {
     boolean isTerminated();
     void terminate();
     String get(int pos);
-    String updateBuffer();
+    List<String> updateBuffer();
 }

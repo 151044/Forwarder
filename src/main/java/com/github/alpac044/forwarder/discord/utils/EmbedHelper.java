@@ -1,4 +1,4 @@
-package com.freemyip.nopersonalinfo.discord.utils;
+package com.github.alpac044.forwarder.discord.utils;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
