@@ -1,22 +1,18 @@
 package com.github.alpac044.forwarder;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractSession implements Session{
-    private List<String> list = new ArrayList<>();
     private boolean isTerminated = false;
     private long id;
     public AbstractSession(long id){
         this.id = id;
     }
-    @Override
-    public List<String> buffer() {
-        return List.copyOf(list);
-    }
 
     @Override
-    public void sendLine(String s) {
+    public void sendLine(String s) throws IOException {
 
     }
 
@@ -35,8 +31,4 @@ public abstract class AbstractSession implements Session{
         isTerminated = true;
     }
 
-    @Override
-    public String get(int pos) {
-        return list.get(pos);
-    }
 }
